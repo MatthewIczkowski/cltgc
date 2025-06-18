@@ -11,19 +11,18 @@ export function HeroSection() {
   }
 
   return ( 
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden pb-20">
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <Image src={heroImage} alt="Charlotte Golf Club" className="mx-auto block"/>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">Charlotte Golf Club</h1>
-          <p className="text-xl md:text-2xl mb-4 font-medium">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight">Charlotte Golf Club</h1>
+          <p className="text-lg md:text-2xl mb-4 font-medium">
               TrackMan Golf Simulator Membership
           </p>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-md md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
               Experience professional-grade golf simulators year-round. Perfect your swing with TrackMan technology in an
               exclusive, private setting.
           </p>
-          <p className="text-center text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">Waitlist coming soon...</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 className="bg-yellow-400 hover:bg-yellow-500 text-emerald-900 border-emerald-800 border-2 font-semibold px-8 py-4 text-lg rounded-md flex items-center justify-center"
