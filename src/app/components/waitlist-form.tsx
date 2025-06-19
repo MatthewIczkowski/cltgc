@@ -38,13 +38,25 @@ export function WaitlistForm() {
         body: JSON.stringify(formData),
       })
 
+      console.log("Response status:", response.status)
+      console.log("Response ok:", response.ok)
+
       if (!response.ok) {
-        throw new Error("Failed to submit")
+        const errorText = await response.text()
+        console.error("Response error:", errorText)
+        
+        try {
+          const errorData = JSON.parse(errorText)
+          throw new Error(errorData.error || `Failed to submit: ${response.status}`)
+        } catch {
+          throw new Error(`Failed to submit: ${response.status}`)
+        }
       }
 
       setIsSubmitted(true)
-    } catch {
-      setError("Something went wrong. Please try again.")
+    } catch (err) {
+      console.error("Fetch error:", err)
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
