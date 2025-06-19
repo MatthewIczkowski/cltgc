@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-emerald-950 text-white py-12 px-4">
       <div className="mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-yellow-400">Charlotte Golf Club</h3>
             <p className="mb-4 leading-relaxed">
@@ -22,13 +22,13 @@ export function Footer() {
                   href=""
                   className=" hover:underline transition-colors"
                 >
-                  coming soon
+                  Coming Soon
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5" />
                 <a href="" className="hover:underline transition-colors">
-                  coming soon
+                  Coming Soon
                 </a>
               </div>
               <div className="flex items-center space-x-3">
