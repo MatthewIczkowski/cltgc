@@ -24,12 +24,10 @@ export function WaitlistForm() {
 
     setIsSubmitting(true)
     setError("")
-    // console.log(formData)
-    // setIsSubmitted(true)
-    // setIsSubmitting(false)
     console.log(formData)
 
     try {
+      // First, submit to waitlist
       const response = await fetch("/api/waitlist", {
         method: "POST",
         headers: {
@@ -51,6 +49,29 @@ export function WaitlistForm() {
         } catch {
           throw new Error(`Failed to submit: ${response.status}`)
         }
+      }
+
+      // If waitlist submission is successful, send email notification
+      try {
+        const emailResponse = await fetch("/api/send", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formData.email,
+            name: formData.name
+          }),
+        })
+
+        if (!emailResponse.ok) {
+          console.warn("Email notification failed, but waitlist submission was successful")
+        } else {
+          console.log("Email notification sent successfully")
+        }
+      } catch (emailError) {
+        console.warn("Email notification error:", emailError)
+        // Don't fail the entire submission if email fails
       }
 
       setIsSubmitted(true)
