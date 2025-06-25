@@ -89,7 +89,7 @@ export function WaitlistForm() {
 
   if (isSubmitted) {
     return (
-      <section id="waitlist" className="py-20">
+      <section id="waitlist" className="py-20 w-full">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto text-center">
             <div className="border-emerald-200">
@@ -107,21 +107,21 @@ export function WaitlistForm() {
 
   return (
     <section id="waitlist" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Join the Waitlist</h2>
             <p className="text-xl text-slate-600">Be the first to know when Charlotte Golf Club opens for membership</p>
           </div>
 
-          <div className="shadow-xl border-0 rounded-lg bg-white px-4 py-6">
+          <div className="shadow-xl border-0 rounded-lg bg-white px-6 py-6">
             <div className="text-center pb-6 rounded-t-lg">
               <div className="text-2xl text-slate-800">Reserve Your Spot</div>
               <div className="text-lg">Limited founding memberships available</div>
             </div>
             <div className="bg-white rounded-b-lg">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4 bg-white rounded-lg p-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="font-bold">Full Name</label>
                     <input
@@ -156,7 +156,6 @@ export function WaitlistForm() {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Joining Waitlist...
                     </>
                   ) : (
                     "Join the Waitlist"

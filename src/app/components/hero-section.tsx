@@ -11,7 +11,7 @@ export function HeroSection() {
   }
 
   return ( 
-    <div className="relative min-h-screen overflow-hidden pb-20">
+    <div className="relative min-h-screen overflow-hidden">
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <Image src={heroImage} alt="Charlotte Golf Club" className="mx-auto block"/>
