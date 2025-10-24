@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Instagram, MapPin, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -17,19 +17,17 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-yellow-400">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
                 <a
-                  href=""
-                  className=" hover:underline transition-colors"
+                  href="https://www.instagram.com/charlottegolfclub"
+                  className=" hover:underline"
                 >
-                  Coming Soon
+                  Link to Instagram
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5" />
-                <a href="" className="hover:underline transition-colors">
-                  Coming Soon
-                </a>
+                <span>Coming Soon</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5" />
