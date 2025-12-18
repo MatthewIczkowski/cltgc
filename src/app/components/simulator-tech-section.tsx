@@ -59,7 +59,7 @@ export function SimulatorTechSection() {
           <div className="relative">
             <div className="bg-white rounded-xl p-6 shadow-2xl">
               <Image
-                src="/trackman-render.png?height=400&width=600"
+                src="/trackman-render.png"
                 alt="TrackMan Interface Screenshot"
                 width={600}
                 height={400}
